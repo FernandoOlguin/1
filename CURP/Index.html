@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar CURP</title>
+
+    <link href="Datos/Index.css" rel="stylesheet" type="text/css">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>   
+</head>
+<body>
+    <script src="Datos/index.js"></script>
+    <form class="form-select">
+        <div class="container">
+                <div class="modal-body">
+                    <h2 class="mb-3">Generar CURP</h2>
+                    <table> 
+                        <tr>
+                            <td> <label>Nombre(s): </label> </td>
+                            <td> <input type="text" name="Nombres" id="Nombres" width="100px" class="box"></td>
+                        </tr>
+                        <tr>
+                            <td> <label>Apellido paterno: </label> </td>
+                            <td> <input type="text" name="ApPaterno" id="ApPaterno" width="100px" class="box"></td>
+                        </tr>
+                        <tr>
+                            <td> <label>Apellido materno: </label> </td>
+                            <td> <input type="text" name="ApMaterno" id="ApMaterno" width="100px" class="box"></td>
+                        </tr>
+                        <tr>
+                            <td> <label>Fecha de nacimiento: </label> </td>
+                            <td> <input Type="date" name="fchNacimiento" id="fchNacimiento" value="2017-06-01" class="box date"> </td>
+                        </tr>
+                        <tr>
+                            <td> <label>Genero: </label> </td>
+                            <td> 
+                                <select id="Sexo" name="Sexo" width="300px" class="box">
+                                    <option selected="">---</option>
+                                    <option value="H">HOMBRE</option>
+                                    <option value="M">MUJER</option>
+                                </select> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <label>Estado: </label> </td>
+                            <td class="form-select"> 
+                                <select id="Estados" name="Estados" width="100px" class="box">
+                                    <option selected="">---</option>
+                                    <option value="AS"> Aguascalientes </option>
+                                    <option value="BC"> Baja California </option>
+                                    <option value="BS"> Baja California Sur </option>
+                                    <option value="CC"> Campeche </option>
+                                    <option value="CS"> Chiapas </option>
+                                    <option value="CH"> Chihuahua </option>
+                                    <option value="CM"> Ciudad de México </option>
+                                    <option value="CL"> Coahuila </option>
+                                    <option value="CM"> Colima </option>
+                                    <option value="DG"> Durango </option>
+                                    <option value="EM"> Estado de México </option>
+                                    <option value="GT"> Guanajuato </option>
+                                    <option value="GR"> Guerrero </option>
+                                    <option value="HG"> Hidalgo </option>
+                                    <option value="JC"> Jalisco </option>
+                                    <option value="MN"> Michoacán </option>
+                                    <option value="MS"> Morelos </option>
+                                    <option value="NT"> Nayarit </option>
+                                    <option value="NL"> Nuevo León </option>
+                                    <option value="OC"> Oaxaca </option>
+                                    <option value="PL"> Puebla </option>
+                                    <option value="QT"> Querétaro </option>
+                                    <option value="QR"> Quintana Roo </option>
+                                    <option value="SP"> San Luis Potosí </option>
+                                    <option value="SL"> Sinaloa </option>
+                                    <option value="SR"> Sonora </option>
+                                    <option value="TC"> Tabasco </option>
+                                    <option value="TS"> Tamaulipas </option>
+                                    <option value="TL"> Tlaxcala </option>
+                                    <option value="VZ"> Veracruz </option>
+                                    <option value="YN"> Yucatán </option>
+                                    <option value="ZS"> Zacatecas </option>
+                                 </select>
+                            </td>
+                        </tr>
+                        <tr class="align-center">
+                            <td></td>
+                            <td class="pt-3"> <div class="row"> <button id="generar" name="generar" class="btn btn-success bn-lg pull center" onClick="calcularCurp()">Generar</button> </div> </td>
+                        </tr>
+                    </table>
+                    <!--<div>
+                        <input type="text" id="resultado" name="resultado">
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+
+
+
